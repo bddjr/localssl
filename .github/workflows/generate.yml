@@ -25,3 +25,4 @@ jobs:
         name: out
         path: |
           out
+          out/*
