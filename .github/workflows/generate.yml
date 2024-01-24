@@ -16,4 +16,5 @@ jobs:
     - name: generateAll
       run: |
         chmod 777 ./generateAll.sh
+        chmod 777 ./generateDomain.sh
         ./generateAll.sh
