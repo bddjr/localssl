@@ -22,12 +22,6 @@ jobs:
     - name: Archive production artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: out
-        path: out
-
-    - name: Archive production artifacts
-      uses: actions/upload-artifact@v4
-      with:
         name: localhost.crt
         path: out/localhost.crt
 
