@@ -5,13 +5,13 @@
 ***
 ## 开始使用
 ### Windows
-首先安装 [openssl](https://slproweb.com/products/Win32OpenSSL.html) 并设置环境变量，可参考 [博客园文章](https://www.cnblogs.com/dingshaohua/p/12271280.html) 的安装方式二。    
-然后安装 [git for windows](https://gitforwindows.org/) 。
-然后拉取并运行 `./generateAll.bat` 生成自签机构与域名证书。  
+首先安装 [openssl](https://slproweb.com/products/Win32OpenSSL.html) 并设置环境变量，可参考 [博客园文章](https://www.cnblogs.com/dingshaohua/p/12271280.html) 的安装方式二，    
+然后安装 [git for windows](https://gitforwindows.org/) ，  
+然后拉取并运行 `.\generateAll.bat` 生成自签机构与域名证书。  
 ```cmd
 git clone https://github.com/bddjr/localssl
 cd localssl
-./generateAll.bat
+.\generateAll.bat
 ```
 
 ### Linux
