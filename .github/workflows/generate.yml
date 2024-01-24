@@ -25,4 +25,6 @@ jobs:
         name: out
         path: |
           out
-          out/*
+          out/localhost.crt
+          out/localhost.key
+          out/localssl.crt
