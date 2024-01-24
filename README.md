@@ -1,0 +1,34 @@
+# localssl
+
+生成自签证书。  
+
+***
+## 开始使用
+### Windows
+首先安装 [openssl](https://slproweb.com/products/Win32OpenSSL.html) 并设置环境变量，可参考 [博客园文章](https://www.cnblogs.com/dingshaohua/p/12271280.html) 的安装方式二。    
+
+然后运行 `./generateAll.bat` 生成自签机构与域名证书。  
+
+### Linux
+（未实测）  
+Linux主流发行版通常自带openssl，你只需运行 `./generateAll.sh` 生成自签机构与域名证书。  
+
+***
+## 编辑 localssl.ext
+按照如下格式
+```
+subjectAltName = DNS:localhost, DNS:local.example.com, IP:127.0.0.1, IP:::1
+```
+
+然后重新生成，再打开 `out/localhost.crt` ，点击“详细信息”，找到“使用者可选名称”。  
+
+![image](./READMEimages/使用者可选名称.jpg)
+
+***
+## 信任证书
+将 `out/localssl.crt` 添加到操作系统里的 “受信任的根证书颁发机构” 。
+
+***
+部分内容参考了  
+https://learn.microsoft.com/zh-cn/azure/application-gateway/self-signed-certificates  
+以及互联网上的其它文章。  
